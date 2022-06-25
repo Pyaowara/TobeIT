@@ -1,0 +1,213 @@
+body {
+  font-family: 'Kanit', sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #009961;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00cc81;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Kanit', sans-serif;
+}
+
+
+.get-started-btn {
+  margin-left: 25px;
+  background: #009961;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 25px 9px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+}
+.get-started-btn:hover {
+  background: #00b371;
+  color: #fff;
+}
+  .navbar a, .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 3px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+  }
+
+/* Hero Adoption */
+
+  #hero2 {
+    width: 100%;
+    height: 100vh;
+    background: url("https://static.stacker.com/s3fs-public/AnimalShelters01IntroShelterJBVG.png") top center;
+    background-size: cover;
+    position: relative;
+  }
+
+  
+#hero2:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#hero2 .container {
+  padding-top: 72px;
+  position: relative;
+  text-align: center;
+}
+#hero2 h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+#hero2 h2 {
+  color: #eee;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+#hero2 .play-btn {
+  width: 94px;
+  height: 94px;
+  margin: 0 auto;
+  background: radial-gradient(#009961 50%, rgba(0, 153, 97, 0.4) 52%);
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+#hero2 .play-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+#hero2 .play-btn::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate-btn 3s;
+  animation: pulsate-btn 3s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(0, 153, 97, 0.7);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+#hero2 .play-btn:hover::after {
+  border-left: 15px solid #009961;
+  transform: scale(20);
+}
+#hero2 .play-btn:hover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 200;
+  -webkit-animation: none;
+  animation: none;
+  border-radius: 0;
+}
+@media (min-width: 1024px) {
+  #hero2 {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 768px) {
+  #hero2 h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero2 h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.contact .php-email-form button[type=button] {
+  background: #009961;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .php-email-form button[type=button]:hover {
+  background: #00b371;
+}
+
+
+.section-title {
+  padding-bottom: 10px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: #009961;
+  bottom: 0;
+  left: 0;
+}
+.section-title p {
+  margin-bottom: 0;
+  color: #777777;
+  font-size: 15px;
+}
+
+section {
+  padding: 50px 0;
+  overflow: hidden;
+}

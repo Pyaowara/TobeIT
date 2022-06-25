@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="assets/vendor/bootstrap/css/bootstrap copy.css" rel="stylesheet">
+    <link href="assets/css/Datastyle.css" rel="stylesheet">
+</head>
+<body>
+    <form>
+        <h1 style="text-align: center">Data Collecting Prototype</h1>
+        <div class="container">
+            <div class="row col-md-6 col-md-offset-3">
+              <div class="panel panel-primary ">
+                <div class="panel-heading form-group">
+            <label>ชื่อสัตว์เลี้ยง: </label>
+            <input type="text" required id="petname"><br>
+        <div class="mb-2 form-group">
+            <label>เพศ: </label>
+            <input type="radio" id="gender" required> Male
+            <input type="radio" id="gender" required> Female <br>
+        </div>
+        <div class="mb-2 form-group">
+            <label>ชนิดของสัตว์ (หมา แมว ไก่ ฯลฯ): </label>
+            <input type="text" id="animaltype" required>
+        </div>
+        <div class="mb-2">
+            <label>วันที่หาย: </label>
+            <input type="date" id="dateoflost" required>
+        </div>
+        <div class="mb-2">
+            <label>เวลาที่หาย: </label>
+            <input type="text" id="timeoflost" required>
+        </div>
+        <div class="mb-2">
+            <label>สถานที่ที่หาย: </label>
+            <input type="text" id="placeoflost" required>
+        </div>
+        <div class="mb-2">
+            <label>รูปของสัตว์เลี้ยง (ถ้ามี): </label>
+            <input type="file" id="petimages"multiple required>
+        </div>
+        <div class="mb-2">
+            <label>ลักษณะเด่นของสัตว์เลี้ยง: </label>
+            <input type="text" id="notablefeatures" required>
+        </div>
+        <div class="mb-2">
+            <label>Email ของคุณ: </label>
+            <input type="text" id="contactemail" required>
+        </div>
+        <div class="mb-2">
+            <label>เบอร์โทรศัพท์ของคุณ: </label>
+            <input type="text" id="contactnumber" required>
+            <div class="mb-2">
+            <input type="submit" value="Submit"></div>
+        </div></div></div>
+    </form>
+
+    <script type="text/javascript">
+        function langbarn(animal) {
+            animal.preventDefault();
+
+            var petname = document.getElementById("petname").value;
+            var pre_gender = document.getElementById("gender").value;
+            var animaltype = document.getElementById("animaltype").value;
+            var dateoflost = document.getElementById("dateoflost").value;
+            var timeoflost = document.getElementById("timeoflost").value;
+            var placeoflost = document.getElementById("placeoflost").value;
+            var petimages = document.getElementById("petimages").value;
+            var notablefeatures = document.getElementById("notablefeatures").value;
+            var contactemail = document.getElementById("contactemail").value;
+            var contactnumber = document.getElementById("contactnumber").value;
+
+            pre_gender.checked ? gender = "Male" : gender = "Female";
+
+            localStorage.setItem('locals_petname', petname);
+            localStorage.setItem('locals_gender', gender);
+            localStorage.setItem('locals_animaltype', animaltype);
+            localStorage.setItem('locals_dateoflost', dateoflost);
+            localStorage.setItem('locals_timeoflost', timeoflost);
+            localStorage.setItem('locals_placeoflost', placeoflost);
+            localStorage.setItem('locals_petimages', petimages);
+            localStorage.setItem('locals_notablefeatures', notablefeatures);
+            localStorage.setItem('locals_contactemail', contactemail);
+            localStorage.setItem('locals_contactnumber', contactnumber);
+
+            console.log("task failed successfully")
+        }
+    </script>
+</body>
+</html>
